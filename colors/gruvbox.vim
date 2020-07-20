@@ -107,13 +107,13 @@ let s:gb.light3      = ['#87A0C0', 248]     " 189-174-147
 let s:gb.light4      = ['#7995B9', 246]     " 168-153-132
 let s:gb.light4_256  = ['#7995B9', 246]     " 168-153-132
 
-let s:gb.bright_red     = ['#BB5871', 167]     " 251-73-52
-let s:gb.bright_green   = ['#52A394', 142]     " 184-187-38
-let s:gb.bright_yellow  = ['#D1B28D', 214]     " 250-189-47
+let s:gb.bright_red     = ['#C94F6D', 167]     " 251-73-52
+let s:gb.bright_green   = ['#5CB8A7', 142]     " 184-187-38
+let s:gb.bright_yellow  = ['#DBC074', 214]     " 250-189-47
 let s:gb.bright_blue    = ['#4B89B8', 109]     " 131-165-152
-let s:gb.bright_purple  = ['#4945A3', 175]     " 211-134-155
-let s:gb.bright_aqua    = ['#59B9BA', 108]     " 142-192-124
-let s:gb.bright_orange  = ['#CB8679', 208]     " 254-128-25
+let s:gb.bright_purple  = ['#6552AB', 175]     " 211-134-155
+let s:gb.bright_aqua    = ['#63CDCF', 108]     " 142-192-124
+let s:gb.bright_orange  = ['#CF7F70', 208]     " 254-128-25
 
 let s:gb.neutral_red    = ['#A65169', 124]     " 204-36-29
 let s:gb.neutral_green  = ['#4A9387', 106]     " 152-151-26
@@ -123,13 +123,13 @@ let s:gb.neutral_purple = ['#434094', 132]     " 177-98-134
 let s:gb.neutral_aqua   = ['#51A5A8', 72]      " 104-157-106
 let s:gb.neutral_orange = ['#B4796F', 166]     " 214-93-14
 
-let s:gb.faded_red      = ['#A65169', 88]      " 157-0-6
-let s:gb.faded_green    = ['#4A9387', 100]     " 121-116-14
-let s:gb.faded_yellow   = ['#BBA183', 136]     " 181-118-20
-let s:gb.faded_blue     = ['#447CA7', 24]      " 7-102-120
-let s:gb.faded_purple   = ['#434094', 96]      " 143-63-113
-let s:gb.faded_aqua     = ['#51A5A8', 66]      " 66-123-88
-let s:gb.faded_orange   = ['#B4796F', 130]     " 175-58-3
+let s:gb.faded_red      = ['#925175', 88]      " 157-0-6
+let s:gb.faded_green    = ['#4A838A', 100]     " 121-116-14
+let s:gb.faded_yellow   = ['#AE9A8F', 136]     " 181-118-20
+let s:gb.faded_blue     = ['#4470A7', 24]      " 7-102-120
+let s:gb.faded_purple   = ['#424094', 96]      " 143-63-113
+let s:gb.faded_aqua     = ['#59A2BB', 66]      " 66-123-88
+let s:gb.faded_orange   = ['#A5777E', 130]     " 175-58-3
 
 " }}}
 " Setup Emphasis: {{{
@@ -485,6 +485,7 @@ if version >= 700
   call s:HL('TabLineSel', s:bg1, s:green, s:invert_tabline)
   " Not active tab page label
   hi! link TabLine TabLineFill
+  hi! TabLine cterm=bold gui=bold ctermbg=245 ctermfg=234 guibg=#151D28 guifg=#2A3C52
 
   " Match paired bracket under the cursor
   call s:HL('MatchParen', s:none, s:bg3, s:bold)
