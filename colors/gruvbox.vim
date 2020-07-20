@@ -88,12 +88,12 @@ let s:gb = {}
 " fill it with absolute colors
 let s:gb.dark0_hard  = ['#151D28', 234]     " 29-32-33
 let s:gb.dark0       = ['#192330', 235]     " 40-40-40
-let s:gb.dark0_soft  = ['#223042', 236]     " 50-48-47
-let s:gb.dark1       = ['#2A3C52', 237]     " 60-56-54
-let s:gb.dark2       = ['#31455E', 239]     " 80-73-69
-let s:gb.dark3       = ['#3F5978', 241]     " 102-92-84
-let s:gb.dark4       = ['#456185', 243]     " 124-111-100
-let s:gb.dark4_256   = ['#456185', 243]     " 124-111-100
+let s:gb.dark0_soft  = ['#1E2B3B', 236]     " 50-48-47
+let s:gb.dark1       = ['#223042', 237]     " 60-56-54
+let s:gb.dark2       = ['#2A3C52', 239]     " 80-73-69
+let s:gb.dark3       = ['#31455E', 241]     " 102-92-84
+let s:gb.dark4       = ['#3F5978', 243]     " 124-111-100
+let s:gb.dark4_256   = ['#3F5978', 243]     " 124-111-100
 
 let s:gb.gray_245    = ['#5F82AB', 245]     " 146-131-116
 let s:gb.gray_244    = ['#5F82AB', 244]     " 146-131-116
@@ -480,9 +480,9 @@ if version >= 700
   hi! link CursorColumn CursorLine
 
   " Tab pages line filler
-  call s:HL('TabLineFill', s:bg4, s:bg1, s:invert_tabline)
+  call s:HL('TabLineFill', s:bg4, s:bg0, s:invert_tabline)
   " Active tab page label
-  call s:HL('TabLineSel', s:green, s:bg1, s:invert_tabline)
+  call s:HL('TabLineSel', s:bg1, s:green, s:invert_tabline)
   " Not active tab page label
   hi! link TabLine TabLineFill
 
@@ -545,7 +545,7 @@ hi! link WarningMsg GruvboxRedBold
 call s:HL('LineNr', s:bg4, s:number_column)
 
 " Column where signs are displayed
-call s:HL('SignColumn', s:none, s:sign_column)
+call s:HL('SignColumn', s:bg0, s:sign_column)
 
 " Line used for closed folds
 call s:HL('Folded', s:gray, s:bg1, s:italic)
